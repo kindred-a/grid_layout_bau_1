@@ -14,7 +14,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 1.2rem;
     min-height: 100%;
-
+    background-image: url(img/landing_page.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,12 +36,24 @@ body {
     /*background-color: #133539;*/
 }
 
+.logo img {
+    height: 80px;
+}
+
+.logo_img {
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+}
+
 .navbar {
     grid-area: navbar;
+    display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
     /*background-color: #D8DE9C;*/
 }
 
 .main {
+    background-image: url(img/logo BAU.svg);
     grid-area: main;
     display: flex;
     align-items: center;
@@ -64,13 +76,8 @@ body {
     display: grid;
     gap: 10px;
     grid-template:
-        "header"  100px
-        "navbar"  50px
-        "main"    auto
-        "sidebar" 100px
-        "footer" 100px;
+        "header"100px "navbar"50px "main"auto "sidebar"100px "footer"100px;
 }
-
 
 /* @media para tablet */
 @media (min-width: 600px) {
@@ -83,22 +90,14 @@ body {
             "sidebar  main"
             "footer   footer";*/
         grid-template:
-            "header  header"  100px
-            "navbar  navbar"  50px
-            "sidebar main"    auto
-            "footer  footer"  100px /
-            200px    auto;
+            "header  header"100px "navbar  navbar"50px "sidebar main"auto "footer  footer"100px / 200px auto;
     }
 }
 
 /* @media para tablet desktop */
-
 @media (min-width: 900px) {
     .grid_container {
         grid-template:
-            "header   header  header"    100px
-            "navbar   main    sidebar"   auto
-            "footer   footer  footer"    100px /
-             200px    auto     200px;
+            "header   header  header"100px "navbar   main    sidebar"auto "footer   footer  footer"100px / 200px auto 200px;
     }
 }
